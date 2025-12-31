@@ -69,28 +69,44 @@
             background-color: var(--surface-bg);
         }
 
-        /* PER-LESSON UI RULES */
-        .lesson-card {
-            pointer-events: auto !important;
-            transition: all 0.2s ease;
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .sketch-border {
+                border-radius: 12px 2px 12px 2px/2px 12px 2px 12px !important;
+            }
+            
+            .sketch-button {
+                border-radius: 12px 2px 12px 2px/2px 12px 2px 12px !important;
+                min-height: 44px; /* iOS touch target minimum */
+            }
+            
+            /* Improve readability on small screens */
+            body {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            
+            /* Better spacing for mobile */
+            .space-y-12 > * + * { margin-top: 2rem; }
+            .space-y-16 > * + * { margin-top: 3rem; }
+            
+            /* Ensure touch targets are adequate */
+            button, .cursor-pointer {
+                min-height: 44px;
+                min-width: 44px;
+            }
         }
 
-        .lesson-card.completed {
-            opacity: 1;
+        /* Prevent horizontal scroll on mobile */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
         }
 
-        .lesson-card.incomplete {
-            opacity: 0.9;
-        }
-
-        /* Fix scroll containers */
-        .scroll-container {
-            scrollbar-width: thin;
-            scrollbar-color: #d1d5db transparent;
-        }
-
-        .dark-mode .scroll-container {
-            scrollbar-color: #4b5563 transparent;
+        /* Better focus states for accessibility */
+        button:focus-visible, input:focus-visible {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
         }
 
         @media print {
@@ -115,7 +131,7 @@
       }
     }
     </script>
-  <script type="module" crossorigin src="./assets/index-DYRAt4-d.js"></script>
+  <script type="module" crossorigin src="./assets/index-DuVcsLbv.js"></script>
 </head>
 <body>
     <div id="root"></div>
