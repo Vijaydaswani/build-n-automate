@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build n Automate | DevOps & Automation Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --sketch-radius-1: 255px 15px 225px 15px/15px 225px 15px 255px;
+        --sketch-radius-2: 15px 225px 15px 255px/255px 15px 225px 15px;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #fcfcfc;
+      }
+      .mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .sketch-border {
+        border: 2px solid #374151;
+        border-radius: var(--sketch-radius-1);
+      }
+      .sketch-border-alt {
+        border: 2px solid #374151;
+        border-radius: var(--sketch-radius-2);
+      }
+      .sketch-button {
+        border: 2px solid #374151;
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        transition: all 0.2s ease;
+      }
+      .sketch-button:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 4px 4px 0px 0px #374151;
+      }
+      .sketch-card {
+        border: 2px solid #374151;
+        border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+        transition: transform 0.2s ease;
+      }
+      .sketch-card:hover {
+        transform: rotate(-1deg) scale(1.02);
+      }
+      .divider {
+        height: 2px;
+        background: #374151;
+        border-radius: 100%;
+        opacity: 0.3;
+      }
+      .hand-drawn-line {
+        filter: url(#rough-filter);
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-DDrLMoCU.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- SVG Filter for rough edges -->
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="rough-filter">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+        </filter>
+      </defs>
+    </svg>
+</body>
+</html>
