@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Kubernetes: Zero → Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper-bg: #fdfcf0;
+            --ink-color: #1a1a1a;
+            --sketch-border: 2px solid var(--ink-color);
+            --surface-bg: #ffffff;
+            --muted-text: #4b5563;
+            --terminal-bg: #1a1a1a;
+            --terminal-text: #4ade80;
+        }
+
+        .dark-mode {
+            --paper-bg: #121212;
+            --ink-color: #fdfcf0;
+            --surface-bg: #1e1e1e;
+            --muted-text: #9ca3af;
+            --terminal-bg: #000000;
+            --terminal-text: #22c55e;
+            background-image: radial-gradient(#333 1px, transparent 1px) !important;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--paper-bg);
+            color: var(--ink-color);
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 24px 24px;
+            margin: 0;
+            padding: 0;
+            /* Scroll safety rule: do not hide overflow on body globally */
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .sketch-font { font-family: 'Architects Daughter', cursive; }
+        
+        .sketch-border {
+            border: var(--sketch-border);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+
+        .sketch-button {
+            border: var(--sketch-border);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            transition: transform 0.1s ease, background-color 0.2s;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            pointer-events: auto !important;
+        }
+
+        .sketch-button:active { transform: scale(0.96); }
+
+        .rough-box {
+            border: 2px solid currentColor;
+            padding: 1.5rem;
+            border-radius: 12px 2px 12px 2px/2px 12px 2px 12px;
+            background-color: var(--surface-bg);
+        }
+
+        /* PER-LESSON UI RULES */
+        .lesson-card {
+            pointer-events: auto !important;
+            transition: all 0.2s ease;
+        }
+
+        .lesson-card.completed {
+            opacity: 1;
+        }
+
+        .lesson-card.incomplete {
+            opacity: 0.9;
+        }
+
+        /* Fix scroll containers */
+        .scroll-container {
+            scrollbar-width: thin;
+            scrollbar-color: #d1d5db transparent;
+        }
+
+        .dark-mode .scroll-container {
+            scrollbar-color: #4b5563 transparent;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; overflow: visible !important; }
+            .sketch-border { border-radius: 0 !important; border: 1px solid black !important; }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+        .dark-mode ::-webkit-scrollbar-thumb { background: #4b5563; }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+      }
+    }
+    </script>
+  <script type="module" crossorigin src="/assets/index-DYRAt4-d.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
